@@ -1,0 +1,19 @@
+--to run the project from maven
+
+go to location of project oepn cd 
+cd to location project
+mvn test --this command will compile and run the test cases
+mvn complie --it will complie only it wont run the test cases
+we can also tag by using mvn command instead of cucumber
+mvn test -Dcucumber.options="--tags @AddPlace"
+for reporting we have to use: mvn test verify
+
+//jenkins
+go to jenkis.war file location
+from there type java -jar jenkis.war -httpPort=9090--enable-future-java
+first we have to create a job
+then we have to give loc of the project click on advance in company that might in git
+give hte path of rep url
+for use we have tocustom worksapce
+add build step-->invoke top level maven taget-->mvn(we can remove mvn) test verify -Dcucumber.options="--tags @AddPlace"
+the save project --> build now(it trigger the completre prject)
